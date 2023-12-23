@@ -4,6 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import { Provider } from 'react-redux';
 import store from './store';
+import Home from './components/Home';
 import TestGrid from './components/TestGrid';
 import TestFlex from './components/TestFlex';
 import TestSelect from './components/TestSelect';
@@ -14,6 +15,7 @@ function App() {
     <Router>
       <div> 
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/test-grid" element={<TestGrid />} /> 
             <Route path="/test-flex" element={<TestFlex />} /> 
             <Route path="/test-select" element={<TestSelect />} /> 
